@@ -1,0 +1,221 @@
+/* Grundlegendes Reset und Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hintergrundbild für den gesamten Body */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter Hintergrund */
+    padding: 10px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Hauptinhalt Styling */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8); /* Leicht transparenter Hintergrund */
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Maximale Breite für bessere Lesbarkeit */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Zentrierung des Textes */
+}
+
+/* Sektionen */
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p, a {
+    line-height: 1.8; /* Erhöht den Zeilenabstand für bessere Lesbarkeit */
+    color: #555;
+}
+
+/* Galerie Styling */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 200px; /* Flex-Grow, Flex-Shrink und Flex-Basis für responsive Gestaltung */
+    text-align: center;
+    position: relative;
+}
+
+.gallery-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery-item button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.gallery-item button:hover {
+    background-color: #555;
+}
+
+/* Detailansicht Styling */
+#detail-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2000;
+}
+
+#detail-container img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#detail-container h2 {
+    margin-bottom: 10px;
+}
+
+#detail-container p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#detail-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+#detail-container button:hover {
+    background-color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navigation Styling */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    /* Hauptinhalt Styling */
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    /* Galerie Styling */
+    .gallery-item {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hauptinhalt Styling */
+    main {
+        padding: 10px;
+    }
+
+    /* Galerie Styling */
+    .gallery-item {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    
+    .gallery-item button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

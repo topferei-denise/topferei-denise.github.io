@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Töpferei - Denise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#startseite" onclick="showSection('startseite')">Startseite</a></li>
+                <li><a href="#ueber-mich" onclick="showSection('ueber-mich')">Über Mich</a></li>
+                <li><a href="#galerie" onclick="showSection('galerie')">Galerie</a></li>
+                <li><a href="#shop" onclick="showSection('shop')">Shop</a></li>
+                <li><a href="#blog" onclick="showSection('blog')">Blog</a></li>
+                <li><a href="#kontakt" onclick="showSection('kontakt')">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Startseite -->
+        <section id="startseite">
+            <h1>Willkommen bei der Töpferei von Denise</h1>
+            <p>Entdecken Sie einzigartige handgemachte Töpferwaren, die mit viel Liebe und Sorgfalt hergestellt wurden. Meine Kollektion umfasst eine Vielzahl von Stücken, die sowohl funktional als auch ästhetisch ansprechend sind. Ich lege großen Wert auf Qualität und Detailgenauigkeit, um sicherzustellen, dass jedes Stück ein wahres Kunstwerk ist.</p>
+        </section>
+
+        <!-- Über Mich -->
+        <section id="ueber-mich" style="display:none;">
+            <h2>Über Mich</h2>
+            <p>Mein Name ist Denise und ich habe meine Leidenschaft für das Töpfern vor 10 Jahren entdeckt. Die Schönheit, die in der Einfachheit und Handarbeit liegt, inspiriert mich immer wieder aufs Neue. Seit 2014 widme ich mich dieser Kunstform und habe über die Jahre meine Techniken verfeinert. Meine Werkstatt ist nicht nur ein Ort der Kreativität, sondern auch ein Raum des Lernens und der Gemeinschaft.</p>
+        </section>
+
+        <!-- Galerie -->
+        <section id="galerie" style="display:none;">
+            <h2>Galerie</h2>
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Hier werden die Galerie-Elemente durch JavaScript eingefügt -->
+            </div>
+            <div id="detail-container" style="display:none;"></div>
+        </section>
+
+        <!-- Shop -->
+        <section id="shop" style="display:none;">
+            <h2>Shop</h2>
+            <p>Sie können meine Produkte über das Kontaktformular unter der Section "Kontakt" anfordern. Ich werde versuchen, Ihnen in 24 Stunden zu antworten.</p>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog" style="display:none;">
+            <h2>Blog</h2>
+            <article>
+                <h3>Die Magie der Keramik: Ein tiefer Einblick in die Kunst des Töpferns</h3>
+                <p>Das Töpfern ist eine Kunst, die weit über das Formen von Ton hinausgeht. Es ist eine Reise der Entdeckung, bei der jede Drehung der Töpferscheibe und jeder Brand im Ofen das Werkstück weiter formt und verändert. In diesem Blog teile ich meine Erfahrungen, Techniken und die Geschichten hinter meinen Kreationen...</p>
+                <a href="blog1.html">Weiterlesen</a>
+            </article>
+        </section>
+
+        <!-- Kontakt -->
+        <section id="kontakt" style="display:none;">
+            <h2>Kontakt</h2>
+            <form action="mailto:litwindenise@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Absenden</button>
+            </form>
+            <p>Wichtig!! Wenn Sie ihre email absenden wollen, werden Sie in ihr outlook programm gesendet, dort müssen Sie umbedingt einen Betreff angeben, da es sonst nicht geht.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Töpferei - Denise, developed by Philipp Litwin. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
